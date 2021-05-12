@@ -1,0 +1,250 @@
+[ 2015-12-18T21:08:36+08:00 ] 10.210.92.37 /lookup/index.php/Home/Teacher/getsHot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+NOTIC: [2048] Declaration of Home\Controller\TeacherController::get() should be compatible with Think\Controller::get($name = '') /Applications/XAMPP/xamppfiles/htdocs/lookup/Application/Home/Controller/TeacherController.class.php 第 272 行.
+SQL: select t.id,t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) [ RunTime:0.0121s ]
+SQL: select t.id, t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) desc limit 0,10 [ RunTime:0.0004s ]
+
+[ 2015-12-18T21:09:11+08:00 ] 10.210.92.37 /lookup/index.php/Home/Teacher/getsHot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+NOTIC: [2048] Declaration of Home\Controller\TeacherController::get() should be compatible with Think\Controller::get($name = '') /Applications/XAMPP/xamppfiles/htdocs/lookup/Application/Home/Controller/TeacherController.class.php 第 272 行.
+SQL: select t.id,t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) [ RunTime:0.0004s ]
+SQL: select t.id, t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) desc limit 0,10 [ RunTime:0.0003s ]
+
+[ 2015-12-18T21:11:52+08:00 ] 10.210.92.37 /lookup/index.php/Home/Teacher/getsHot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+NOTIC: [2048] Declaration of Home\Controller\TeacherController::get() should be compatible with Think\Controller::get($name = '') /Applications/XAMPP/xamppfiles/htdocs/lookup/Application/Home/Controller/TeacherController.class.php 第 272 行.
+SQL: select t.id,t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) [ RunTime:0.0004s ]
+SQL: select t.id, t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) desc limit 0,10 [ RunTime:0.0003s ]
+
+[ 2015-12-18T21:14:03+08:00 ] 10.210.92.37 /lookup/index.php/Home/Teacher/getsHot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+NOTIC: [2048] Declaration of Home\Controller\TeacherController::get() should be compatible with Think\Controller::get($name = '') /Applications/XAMPP/xamppfiles/htdocs/lookup/Application/Home/Controller/TeacherController.class.php 第 272 行.
+SQL: select t.id,t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) [ RunTime:0.0004s ]
+SQL: select t.id, t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) desc limit 0,10 [ RunTime:0.0003s ]
+
+[ 2015-12-18T21:14:20+08:00 ] 10.210.92.37 /lookup/index.php/Home/Teacher/getsHot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000300s ]
+NOTIC: [2048] Declaration of Home\Controller\TeacherController::get() should be compatible with Think\Controller::get($name = '') /Applications/XAMPP/xamppfiles/htdocs/lookup/Application/Home/Controller/TeacherController.class.php 第 272 行.
+SQL: select t.id,t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) [ RunTime:0.0004s ]
+SQL: select t.id, t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) desc limit 0,10 [ RunTime:0.0003s ]
+
+[ 2015-12-18T21:14:21+08:00 ] 10.210.92.37 /lookup/index.php/Home/Teacher/getsHot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000298s ]
+NOTIC: [2048] Declaration of Home\Controller\TeacherController::get() should be compatible with Think\Controller::get($name = '') /Applications/XAMPP/xamppfiles/htdocs/lookup/Application/Home/Controller/TeacherController.class.php 第 272 行.
+SQL: select t.id,t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) [ RunTime:0.0003s ]
+SQL: select t.id, t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) desc limit 0,10 [ RunTime:0.0003s ]
+
+[ 2015-12-18T21:15:45+08:00 ] 10.210.92.37 /lookup/index.php/Home/Teacher/getsHot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+NOTIC: [2048] Declaration of Home\Controller\TeacherController::get() should be compatible with Think\Controller::get($name = '') /Applications/XAMPP/xamppfiles/htdocs/lookup/Application/Home/Controller/TeacherController.class.php 第 272 行.
+SQL: select t.id,t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) [ RunTime:0.0004s ]
+SQL: select t.id, t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) desc limit 0,10 [ RunTime:0.0003s ]
+
+[ 2015-12-18T21:15:46+08:00 ] 10.210.92.37 /lookup/index.php/Home/Teacher/getsHot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000299s ]
+NOTIC: [2048] Declaration of Home\Controller\TeacherController::get() should be compatible with Think\Controller::get($name = '') /Applications/XAMPP/xamppfiles/htdocs/lookup/Application/Home/Controller/TeacherController.class.php 第 272 行.
+SQL: select t.id,t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) [ RunTime:0.0004s ]
+SQL: select t.id, t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) desc limit 0,10 [ RunTime:0.0004s ]
+
+[ 2015-12-18T21:17:27+08:00 ] 10.210.92.37 /lookup/index.php/Home/Teacher/getsHot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+NOTIC: [2048] Declaration of Home\Controller\TeacherController::get() should be compatible with Think\Controller::get($name = '') /Applications/XAMPP/xamppfiles/htdocs/lookup/Application/Home/Controller/TeacherController.class.php 第 272 行.
+SQL: select t.id,t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) [ RunTime:0.0004s ]
+SQL: select t.id, t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) desc limit 0,10 [ RunTime:0.0003s ]
+
+[ 2015-12-18T21:17:37+08:00 ] 10.210.92.37 /lookup/index.php/Home/Teacher/getsHot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+NOTIC: [2048] Declaration of Home\Controller\TeacherController::get() should be compatible with Think\Controller::get($name = '') /Applications/XAMPP/xamppfiles/htdocs/lookup/Application/Home/Controller/TeacherController.class.php 第 272 行.
+SQL: select t.id,t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) [ RunTime:0.0004s ]
+SQL: select t.id, t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) desc limit 0,10 [ RunTime:0.0003s ]
+
+[ 2015-12-18T21:17:42+08:00 ] 10.210.92.37 /lookup/index.php/Home/Teacher/getsHot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000293s ]
+NOTIC: [2048] Declaration of Home\Controller\TeacherController::get() should be compatible with Think\Controller::get($name = '') /Applications/XAMPP/xamppfiles/htdocs/lookup/Application/Home/Controller/TeacherController.class.php 第 272 行.
+SQL: select t.id,t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) [ RunTime:0.0003s ]
+SQL: select t.id, t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) desc limit 0,10 [ RunTime:0.0003s ]
+
+[ 2015-12-18T21:17:46+08:00 ] 10.210.92.37 /lookup/index.php/Home/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000299s ]
+NOTIC: [2048] Declaration of Home\Controller\UserController::get() should be compatible with Think\Controller::get($name = '') /Applications/XAMPP/xamppfiles/htdocs/lookup/Application/Home/Controller/UserController.class.php 第 260 行.
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `user` WHERE ( phone='18602454715' ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: test /Applications/XAMPP/xamppfiles/htdocs/lookup/Application/Home/Controller/UserController.class.php 第 169 行.
+
+[ 2015-12-18T21:17:47+08:00 ] 10.210.92.37 /lookup/index.php/Home/Teacher/getsHot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000243s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000272s ]
+NOTIC: [2048] Declaration of Home\Controller\TeacherController::get() should be compatible with Think\Controller::get($name = '') /Applications/XAMPP/xamppfiles/htdocs/lookup/Application/Home/Controller/TeacherController.class.php 第 272 行.
+SQL: select t.id,t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) [ RunTime:0.0003s ]
+SQL: select t.id, t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) desc limit 0,10 [ RunTime:0.0003s ]
+
+[ 2015-12-18T21:18:10+08:00 ] 10.210.92.37 /lookup/index.php/Home/Teacher/getsHot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000296s ]
+NOTIC: [2048] Declaration of Home\Controller\TeacherController::get() should be compatible with Think\Controller::get($name = '') /Applications/XAMPP/xamppfiles/htdocs/lookup/Application/Home/Controller/TeacherController.class.php 第 272 行.
+SQL: select t.id,t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) [ RunTime:0.0004s ]
+SQL: select t.id, t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) desc limit 0,10 [ RunTime:0.0003s ]
+
+[ 2015-12-18T21:18:10+08:00 ] 10.210.92.37 /lookup/index.php/Home/Teacher/getsHot
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000295s ]
+NOTIC: [2048] Declaration of Home\Controller\TeacherController::get() should be compatible with Think\Controller::get($name = '') /Applications/XAMPP/xamppfiles/htdocs/lookup/Application/Home/Controller/TeacherController.class.php 第 272 行.
+SQL: select t.id,t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) [ RunTime:0.0004s ]
+SQL: select t.id, t.good,t.bad,t.name,t.pic,t.school_name,t.description,
+    					count(c.examiner) as comment_num
+    				    from examiner as t left join comment as c on c.examiner=t.id 
+    				    group by t.id order by count(c.examiner) desc limit 0,10 [ RunTime:0.0004s ]
+
