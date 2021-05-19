@@ -1,0 +1,10 @@
+.buildpath
+.project
+.DS_Store
+#忽略
+Public/
+ThinkPHP/
+logs/
+.DS_Score
+Uploads/
+Application/Runtime/
