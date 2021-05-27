@@ -112,7 +112,7 @@ class TeacherController extends Controller{
 			$this->error('修改失败 上传失败');
 		}
 
-		$teacher_table = M('teacher');
+		$teacher_table = M('examiner');
 		$teacher['id']=$tid;
 		$teacher['pic']=$pic;
 		$res = $teacher_table->save($teacher);
@@ -136,7 +136,8 @@ class TeacherController extends Controller{
 		if(empty($teacher)){
 			$this->error('修改失败');
 		}
-
+		
+		
 		$teacher = I('param.');
 		$res=$Form->save($teacher);
 		if(!empty($res)){
