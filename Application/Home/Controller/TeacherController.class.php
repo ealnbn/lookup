@@ -75,14 +75,14 @@ class TeacherController extends Controller {
     	$query_count = "select t.id,t.good,t.bad,t.name,t.pic,t.school_name,t.description,t.academy,t.major,
     					count(c.examiner) as comment_num
     				    from examiner as t left join comment as c on c.examiner=t.id 
-    				    where t.name like '%".$key."%' or t.school_name like '%".$key."%' group by t.id order by count(c.examiner)";
+    				    where t.name like '%".$key."%' or t.school_name like '%".$key."%' or t.description like '%".$key."%' group by t.id order by count(c.examiner)";
     	$all=$Model->query($query_count);
     	$count=count($all);
     
     	$query = "select t.id, t.good,t.bad,t.name,t.pic,t.school_name,t.description,t.academy,t.major,
     					count(c.examiner) as comment_num
     				    from examiner as t left join comment as c on c.examiner=t.id
-    				     where t.name like '%".$key."%'  or t.school_name like '%".$key."%' group by t.id order by count(c.examiner) desc limit ".$page.",".$pageSize;
+    				     where t.name like '%".$key."%'  or t.school_name like '%".$key."%' or t.description like '%".$key."%' group by t.id order by count(c.examiner) desc limit ".$page.",".$pageSize;
     	$list=$Model->query($query);
     	if(empty($list))$list=array();
     	$response['STATUS'] = "success";
