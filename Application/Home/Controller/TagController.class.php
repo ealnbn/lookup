@@ -48,7 +48,7 @@ class TagController extends Controller {
      * @param tid 教师id
      * @param uuid 
      * @param tagid 标签id(可以为空 表示新建)
-     * @param name 标签名字
+     * @param name 标签名字(可以为空 表示已有)
      * 调用地址：/lookup/index.php/Home/Tag/put
      * @return {"STATUS":"success|error","ERRMSG":"参数错误|请登录","RESULT":[k,]}
      */
@@ -56,9 +56,9 @@ class TagController extends Controller {
     		$tid = I('param.tid');
     		$uuid = $this->validate();
     		$tagid=I('param.tagid');
-    		$name = I('param.name');
+    		$name = I('param.name',"");
     		
-    		if(empty($tid) || empty($name)){
+    		if(empty($tid)){
     			$response['STATUS'] = "error";
     			$response['ERRMSG'] = "参数错误";
     			$response['RESULT'] = array();
@@ -72,6 +72,12 @@ class TagController extends Controller {
     			$this->ajaxReturn($response);
     		}
     		if(empty($tagid)){//新建标签
+    			if(empty($name)){
+    				$response['STATUS'] = "error";
+    				$response['ERRMSG'] = "参数错误";
+    				$response['RESULT'] = array();
+    				$this->ajaxReturn($response);
+    			}
     			$tag['teacher']=$tid;
     			$tag['content']=$name;
     			$tag['number']=1;
@@ -104,7 +110,7 @@ class TagController extends Controller {
     			$record['tagid']=$tag['id'];
     			$record['teacherid']=$tid;
     			$record['uuid']=$uuid;
-    			$record['content']=$name;
+    			$record['content']=$tag['content'];
     			$record['create_time']=date("Y-m-d H:i:s");
     			$res_record=M('user_tag')->add($record);
     		}
