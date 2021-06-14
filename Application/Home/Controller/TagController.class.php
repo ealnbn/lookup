@@ -31,12 +31,22 @@ class TagController extends Controller {
      * @param tid
      * @param uuid
      * 调用地址：/lookup/index.php/Home/Tag/gets
-     * @return {"STATUS":"success","ERRMSG":"","RESULT":[k,]}
+     * @return {"STATUS":"success","ERRMSG":"","RESULT":[]}
      */
     public function gets(){
 	    	$tid = I('param.tid',0);
-	    	$this->validate();
-	    $tags=M('tag')->where(array("teacher"=>$tid))->select();
+	    	$uuid=$this->validate();
+    		if(empty($uuid)){
+    			$response['STATUS'] = "error";
+    			$response['ERRMSG'] = "请登录";
+    			$response['RESULT'] = array();
+    			$this->ajaxReturn($response);
+    		}
+	    	$M = new Model();
+	    	$query="select t.`id` ,t.`content` ,t.`teacher` ,t.`number` ,t.`create_time`,COUNT(r.`uuid`) as is_click   
+from tag as t LEFT JOIN (SELECT * FROM `user_tag` WHERE uuid='".$uuid."') as r
+ON r.tagid = t.id  where t.teacher = ".$tid." GROUP BY t.`id`";
+	    $tags=$M->query($query);
 	   	$response['STATUS'] = "success";
 	   	$response['ERRMSG'] = "";
 	   	$response['RESULT'] = array("tags"=>$tags);
@@ -128,6 +138,73 @@ class TagController extends Controller {
     		
     }
     
+    /**
+     * 为老师添加标签
+     * @param tid 教师id
+     * @param uuid
+     * @param name 标签名字
+     * 调用地址：/lookup/index.php/Home/Tag/insert
+     * @return {"STATUS":"success|error","ERRMSG":"参数错误|请登录","RESULT":[k,]}
+     */
+    public function insert(){
+	    	$tid = I('param.tid',0);
+	    	$uuid = $this->validate();
+	    	$name = I('param.name',"");
+	    	
+	    	if(empty($name) || empty($tid)){
+	    		$response['STATUS'] = "error";
+	    		$response['ERRMSG'] = "参数错误";
+	    		$response['RESULT'] = array();
+	    		$this->ajaxReturn($response);
+	    	}
+	    	
+	    	if(empty($uuid)){
+	    		$response['STATUS'] = "error";
+	    		$response['ERRMSG'] = "请登录";
+	    		$response['RESULT'] = array();
+	    		$this->ajaxReturn($response);
+	    	}
+	    	//检查标签是否重名
+	    $res_tag=M('tag')->where(array("name"=>$name,"teacher"=>$tid))->find();
+	    if(empty($res_tag)){
+		    	$response['STATUS'] = "error";
+		    	$response['ERRMSG'] = "请勿重复添加标签";
+		    	$response['RESULT'] = array();
+		    	$this->ajaxReturn($response);
+	    }
+	    	//创建标签
+    		$tag['teacher']=$tid;
+    		$tag['content']=$name;
+    		$tag['number']=1;
+    		$tag['create_time']=date("Y-m-d H:i:s");
+    		$res_tag=M('tag')->add($tag);
+    		
+    		if(empty($res_tag)){
+    			$response['STATUS'] = "error";
+    			$response['ERRMSG'] = "添加失败";
+    			$response['RESULT'] = array();
+    			$this->ajaxReturn($response);
+    		}
+    		//添加记录
+    		$record['tagid']=$res_tag;
+    		$record['teacherid']=$tid;
+    		$record['uuid']=$uuid;
+    		$record['content']=$name;
+    		$record['create_time']=date("Y-m-d H:i:s");
+    		$res_record=M('user_tag')->add($record);
+	    
+	    	if(empty($res_record)){
+	    		$response['STATUS'] = "error";
+	    		$response['ERRMSG'] = "添加失败";
+	    		$response['RESULT'] = array();
+	    		$this->ajaxReturn($response);
+	    	}
+	    	
+	    	$response['STATUS'] = "success";
+	    	$response['ERRMSG'] = "添加成功";
+	    	$response['RESULT'] = array();
+	    	$this->ajaxReturn($response);
+    }
     
 	private function validate(){
     		$uuid=I('param.uuid');
